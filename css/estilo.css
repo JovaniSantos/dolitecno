@@ -1553,7 +1553,7 @@ to {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../img/aaderir.jpg'); /* Imagem de fundo */
+    background-image: url('../img/aaderir.webp'); /* Imagem de fundo */
     background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
     background-blend-mode: overlay; /* Combina a imagem com o gradiente */
     background-position: center; /* Centraliza a imagem */
