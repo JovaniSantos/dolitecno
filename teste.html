@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos de Serviço</title>
+    <!-- No head -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Styles -->
+    <style>
+      :root {
+    --logo-blue: linear-gradient(135deg, #00ffff 0%, #00c3ff 100%);
+    --accent-blue: #319ce8;
+    --dark-blue: #196cf3;
+    --darker-blue: #033789;
+    --neon-shadow: 0 0 5px rgba(0, 221, 255, 0.5);
+    --primary-blue: #196cf3;
+    --secondary-blue: #319ce8;
+    --text-gray: #b0b0b0;
+    --corFundoBody0: #000610;
+    --corFundoBody50: #000E1A;
+    --corFundoBody100: rgba(0, 19, 27, 0.9);
+    --azul-escuro: #001b27;
+}
+
+#showSobreNos {
+    background-color: var(--corFundoBody0);
+    overflow: hidden;
+}
+
+/************************************************************** Eestilo Sobre Nós Page ***************************************************************************************/
+#showSobreNos .content-card,
+.areas-card,
+.mvv-card,
+.stats-card {
+    background: var(--corFundoBody50);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 10px rgba(0, 221, 255, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#showSobreNos .content-card:hover,
+.areas-card:hover,
+.mvv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--neon-shadow);
+}
+
+/* Section Badge and Title */
+#showSobreNos .section-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(49, 156, 232, 0.1);
+    color: var(--accent-blue);
+    border-radius: 30px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+#showSobreNos .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #fff, var(--accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Areas Section */
+#showSobreNos .areas-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+#showSobreNos .area-item {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background: var(--corFundoBody100);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+#showSobreNos .area-item:hover {
+    transform: translateX(10px);
+    background: var(--corFundoBody50);
+    box-shadow: var(--neon-shadow);
+}
+
+#showSobreNos .area-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(49, 156, 232, 0.1);
+    border-radius: 15px;
+    margin-right: 1rem;
+}
+
+#showSobreNos .area-icon i {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+}
+
+/* MVV Cards */
+#showSobreNos .mvv-card {
+    text-align: center;
+    padding: 2.5rem 2rem;
+}
+
+#showSobreNos .mvv-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(49, 156, 232, 0.1);
+    border-radius: 50%;
+}
+
+#showSobreNos .mvv-icon i {
+    font-size: 2rem;
+    color: var(--accent-blue);
+}
+
+#showSobreNos .mvv-card h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-blue);
+}
+
+#showSobreNos .mvv-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    text-align: left;
+}
+
+#showSobreNos .mvv-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: var(--text-gray);
+}
+
+#showSobreNos .mvv-list li i {
+    color: var(--accent-blue);
+    margin-right: 0.75rem;
+    font-size: 0.875rem;
+}
+
+/* Image Gallery */
+#showSobreNos .gallery-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#showSobreNos .gallery-item img {
+    transition: transform 0.3s ease;
+}
+
+#showSobreNos .gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+#showSobreNos .gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 6, 16, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#showSobreNos .gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Statistics Section */
+#showSobreNos .stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--corFundoBody100);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+#showSobreNos .stat-item:hover {
+    transform: translateY(-5px);
+}
+
+#showSobreNos .stat-item h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 0.5rem;
+}
+
+#showSobreNos .stat-item p {
+    margin: 0;
+    color: var(--text-gray);
+    font-size: 0.875rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    #showSobreNos .section-title {
+        font-size: 2rem;
+    }
+
+    #showSobreNos .areas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #showSobreNos .mvv-card {
+        margin-bottom: 1.5rem;
+    }
+
+    #showSobreNos .stat-item h4 {
+        font-size: 2rem;
+    }
+}
+
+#showSobreNos .corTitulo{
+    background: linear-gradient(135deg, #fff, var(--accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#showSobreNos .corItem{
+    color: var(--accent-blue);
+}
+
+/* Animations */
+[data-aos] {
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* Additional text color adjustments */
+#showSobreNos .text-muted {
+    color: var(--text-gray) !important;
+}
+
+#showSobreNos p {
+    color: var(--text-gray);
+}
+
+/************************************************************** Eestilo Sobre Nós Page ***************************************************************************************/
+    </style>
+</head>
+
+<body>
+    <!--- Complete HTML Structure -->
+    <section id="showSobreNos" class="py-5">
+        <div class="container">
+            <!-- Main About Content -->
+            <div class="row g-4 align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="content-card h-100" data-aos="fade-right">
+                        <div class="section-badge">SOBRE NÓS</div>
+                        <h2 class="section-title">Saiba Mais Sobre Nós</h2>
+                        <p class="text-muted">
+                            Nós, da DOLITECNO, facilitamos o trabalho de empresas que atuam em setores estratégicos da
+                            economia, como Construção, Engenharia, Energias, Finanças, Telecomunicações, Saúde e
+                            Seguros. Nosso objetivo é elevar a qualidade das operações dessas empresas ao mais alto
+                            nível, assegurando a proteção de dados e promovendo a liderança na satisfação de clientes e
+                            colaboradores.
+                        </p>
+                        <p class="text-muted">
+                            Nossa abordagem se concentra na integração robusta de sistemas de telecomunicações,
+                            infraestrutura de rede, aplicativos e serviços. Esses elementos são implantados e suportados
+                            por uma equipe técnica altamente qualificada na gestão de TICs, garantindo soluções
+                            completas e eficazes para nossos clientes.
+                        </p>
+                        <p class="text-muted">
+                            Além disso, oferecemos uma metodologia coerente e estruturada para o desenvolvimento de
+                            roteiros estratégicos no campo da Tecnologia de Informação e Comunicação (TIC). Esses
+                            roteiros capacitam executivos e gerentes operacionais a entender, descobrir e alinhar
+                            informações de controle, fortalecendo o crescimento e o desenvolvimento corporativo em todos
+                            os níveis.
+                        </p>
+                        <!-- Image Gallery -->
+                        <div class="image-gallery mt-4">
+                            <div class="row g-3">
+                                <!--<div class="col-6">
+                                <div class="gallery-item" onclick="openImageModal(this)">
+                                    <img src="img/sob.jpg alt="Technology" class="img-fluid rounded shadow-sm">
+                                    <div class="overlay">
+                                        <i class="fas fa-expand"></i>
+                                    </div>
+                                </div>
+                            </div> -->
+                                <div class="col-12">
+                                    <div class="gallery-item" onclick="openImageModal(this)">
+                                        <img src="img/sobreNos.webp" alt="Innovation"
+                                            class="img-fluid rounded shadow-sm">
+                                        <div class="overlay">
+                                            <i class="fas fa-expand"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="areas-card" data-aos="fade-left">
+                        <h3 class="card-title corTitulo">Áreas De Actuação</h3>
+                        <div class="areas-grid">
+                            <!-- Area Items -->
+                            <div class="area-item">
+                                <div class="area-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="area-content">
+                                    <h4 class="corItem">Sector Publico</h4>
+                                    <p>Soluções especializadas para o setor público</p>
+                                </div>
+                            </div>
+                            <div class="area-item">
+                                <div class="area-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div class="area-content">
+                                    <h4 class="corItem">Telecomunicações</h4>
+                                    <p>Infraestrutura e soluções de rede</p>
+                                </div>
+                            </div>
+                            <div class="area-item">
+                                <div class="area-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="area-content">
+                                    <h4 class="corItem">Serviços</h4>
+                                    <p>Consultoria e suporte técnico</p>
+                                </div>
+                            </div>
+                            <div class="area-item">
+                                <div class="area-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="area-content">
+                                    <h4 class="corItem">Energias</h4>
+                                    <p>Soluções para o setor energético</p>
+                                </div>
+                            </div>
+                            <div class="area-item">
+                                <div class="area-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="area-content">
+                                    <h4 class="corItem">Segiuros</h4>
+                                    <p>Soluções para o setor energético</p>
+                                </div>
+                            </div>
+                            <div class="area-item">
+                                <div class="area-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="area-content">
+                                    <h4 class="corItem">Energias</h4>
+                                    <p>Soluções para o setor energético</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission, Vision, Values Section -->
+            <div class="mission-vision-values">
+                <div class="text-center mb-5">
+                    <div class="section-badge">NOSSOS PRINCÍPIOS</div>
+                    <h2 class="section-title">Missão, Visão e Valores</h2>
+                </div>
+                <div class="row g-4">
+                    <!-- Mission Card -->
+                    <div class="col-lg-4">
+                        <div class="mvv-card" data-aos="fade-up" data-aos-delay="0">
+                            <div class="mvv-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3>Missão</h3>
+                            <p>
+                                Fornecer soluções tecnológicas inovadoras que impulsionem o sucesso de nossos clientes,
+                                garantindo excelência e qualidade em cada projeto.
+                            </p>
+                            <ul class="mvv-list">
+                                <li><i class="fas fa-check"></i> Qualidade garantida</li>
+                                <li><i class="fas fa-check"></i> Inovação constante</li>
+                                <li><i class="fas fa-check"></i> Foco no cliente</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Vision Card -->
+                    <div class="col-lg-4">
+                        <div class="mvv-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="mvv-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3>Visão</h3>
+                            <p>
+                                Ser referência em soluções tecnológicas integradas, reconhecida pela excelência,
+                                inovação e compromisso com o sucesso dos clientes.
+                            </p>
+                            <ul class="mvv-list">
+                                <li><i class="fas fa-check"></i> Liderança de mercado</li>
+                                <li><i class="fas fa-check"></i> Reconhecimento global</li>
+                                <li><i class="fas fa-check"></i> Expansão contínua</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Values Card -->
+                    <div class="col-lg-4">
+                        <div class="mvv-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="mvv-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Valores</h3>
+                            <p>
+                                Nossos valores fundamentais guiam nossas ações e decisões, garantindo a
+                                integridade e excelência em tudo que fazemos.
+                            </p>
+                            <ul class="mvv-list">
+                                <li><i class="fas fa-check"></i> Ética e transparência</li>
+                                <li><i class="fas fa-check"></i> Compromisso com resultados</li>
+                                <li><i class="fas fa-check"></i> Valorização das pessoas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-0">
+                        <img src="" alt="Modal Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+ </section>
+
+
+        <!-- Antes do fechamento do body -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+
+            // Image Modal Handler
+            function openImageModal(element) {
+                const imgSrc = element.querySelector('img').src;
+                const modal = document.getElementById('imageModal');
+                const modalImg = modal.querySelector('img');
+                modalImg.src = imgSrc;
+
+                const bsModal = new bootstrap.Modal(modal);
+                bsModal.show();
+            }
+
+            // Counter Animation
+            document.addEventListener('DOMContentLoaded', function () {
+                const counterElements = document.querySelectorAll('.counter');
+
+                const animateCounter = (element) => {
+                    const target = parseInt(element.innerText);
+                    let count = 0;
+                    const duration = 2000; // 2 seconds
+                    const increment = target / (duration / 16); // 60fps
+
+                    const updateCount = () => {
+                        count += increment;
+                        if (count < target) {
+                            element.innerText = Math.round(count);
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            element.innerText = target;
+                        }
+                    };
+
+                    updateCount();
+                };
+
+                // Intersection Observer for counter animation
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateCounter(entry.target);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                counterElements.forEach(counter => observer.observe(counter));
+            });
+        </script>
+</body>
+
+</html>

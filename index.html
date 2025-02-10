@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolitecno</title>
+    <link rel="shortcut icon" href="img/favicon.webp" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+    <link href="css/googleFont.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <script src="js/particles.min.js"></script>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- AOS CSS -->
+    <link href="css/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#sobreNos">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofolio.html">Portfólio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Loja</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <video class="video-background" autoplay muted loop>
+            <source src="video/video-banner1.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+        <div class="container hero-content" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+            <h1 class="hero-title">Bem-vindo a Dolitecno</h1>
+            <p class="hero-description">
+                Acreditamos num Futuro Próspero com Soluções de Informação
+            </p>
+            <a href="contacto.html#contacto" class="hero-btn">solicitar Orçamento
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="sobreNos" class="justify-content-center">
+        <div class="container custom-container ps-3 pt-2 pb-2 pe-3" data-aos="fade-up">
+            <div class="row align-items-center mt-4">
+                <div class="col-md-6 custom-content order-md-2" data-aos="zoom-in-up">
+                    <h1>Saiba Mais Sobre Nós</h1>
+                    <p>
+                        Tendo como modelo de negócio; Consultoria de TICS, Desenvolvimento de Software, DevOps,
+                        Desenvolvimento Web, Gerenciamento de Dados, Integração de Sistemas, Infraestrutura de TI e
+                        Segurança Cibernética. Além dos serviços acima, distribuímos equipamentos de TI, eletrônicos no
+                        mercado médio e empresarial, incluindo computadores, servidores, impressoras, switches,
+                        roteadores,
+                        telefones IP e muito mais.
+                    </p>
+                    <button onclick="clicouLinkSobre()">
+                        Saber Mais 
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="col-md-6 custom-image order-md-1" data-aos="zoom-in-up">
+                    <img src="img/sobreNos.webp" alt="Sucesso nos Negócios">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contador" class="contador">
+        <div id="particles-js"></div> <!-- Partículas separadas do conteúdo -->
+        <div class="container" data-aos="fade-up">
+            <h2 class="text-center">O que alcançámos até agora</h2>
+            <div class="achievements-container mt-3">
+                <div class="achievement">
+                    <h3 class="achievement-number" data-target="232">20</h3>
+                    <p>Clientes</p>
+                </div>
+                <div class="achievement">
+                    <h3 class="achievement-number" data-target="521">100</h3>
+                    <p>Projectos</p>
+                </div>
+                <div class="achievement">
+                    <h3 class="achievement-number" data-target="350">0</h3>
+                    <p>Dias de Suporte</p>
+                </div>
+                <div class="achievement">
+                    <h3 class="achievement-number" data-target="200">0</h3>
+                    <p>Trabalhos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="services-section py-5">
+        <div class="container">
+            <h1 class="text-center mb-5 services-title">Nossos Serviços</h1>
+            <div class="row g-4" data-aos="fade-up">
+                <!-- Informatics Services -->
+                <div class="col-md-4 d-flex" data-aos="zoom-in-left">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/servicos/informatica.webp" alt="Serviços de Informática">
+                        </div>
+                        <div class="service-content">
+                            <h3>Informática</h3>
+                            <p>Soluções completas em tecnologia da informação, desenvolvimento de software e
+                                consultoria.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cyber Security -->
+                <div class="col-md-4 d-flex" data-aos="zoom-in-left">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/servicos/cyber.webp" alt="Ciber Segurança">
+                        </div>
+                        <div class="service-content">
+                            <h3>Ciber Segurança</h3>
+                            <p>Proteção contra ameaças digitais, análise de vulnerabilidades e estratégias de segurança.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Telecommunications Services -->
+                <div class="col-md-4 d-flex" data-aos="zoom-in-right">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/servicos/telecom.webp" alt="Serviços de Telecomunicações">
+                        </div>
+                        <div class="service-content">
+                            <h3>Telecomunicações</h3>
+                            <p>Infraestrutura de redes, comunicação empresarial e soluções de conectividade avançadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Electronic Security -->
+                <div class="col-md-4 d-flex" data-aos="zoom-in-right">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/servicos/security.webp" alt="Segurança Eletrônica">
+                        </div>
+                        <div class="service-content">
+                            <h3>Segurança Eletrônica</h3>
+                            <p>Sistemas de segurança eletrônica para proteção empresarial e residencial.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Telecommunication Networks -->
+                <div class="col-md-4 d-flex" data-aos="zoom-in-left">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/servicos/redes.webp" alt="Redes de Telecomunicações">
+                        </div>
+                        <div class="service-content">
+                            <h3>Redes de Telecomunicações</h3>
+                            <p>Projeto, implementação e manutenção de redes de telecomunicações empresariais.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Installations -->
+                <div class="col-md-4 d-flex" data-aos="zoom-in-left">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/servicos/instalacoes.webp" alt="Instalações">
+                        </div>
+                        <div class="service-content">
+                            <h3>Instalações</h3>
+                            <p>Serviços especializados incluindo redes de dados, câmeras, cerca eletrônica e automações.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5 justify-content-center" data-aos="fade-up">
+                <div class="col-md-4 d-flex text-center" data-aos="zoom-in-left">
+                    <a href="servico.html" class="estiloBotao w-50">
+                        Ver Todos
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14m-7-7l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Competemcias -->
+    <div class="conteiner" id="competencias">
+        <div class="lado-esquerdo">
+            <h1>Competências Essenciais</h1>
+            <button class="botao-ver text-center">
+                Exibir Todas
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="lado-direito">
+            <div class="linha-tempo">
+                <div class="item-servico">
+                    <div class="ponto"></div>
+                    <div class="linha"></div>
+                    <div class="conteudo-servico">
+                        <h3>Plataformas</h3>
+                        <p>a DOLITECNO ajuda as empresas a traçarem um plano eficaz para usar a tecnologia da informação
+                            a seu favor, garantindo que todos os níveis da organização estejam alinhados e que as
+                            informações importantes sejam utilizadas de forma estratégica para o desenvolvimento.</p>
+                    </div>
+                </div>
+
+                <div class="item-servico">
+                    <div class="ponto"></div>
+                    <div class="linha"></div>
+                    <div class="conteudo-servico">
+                        <h3>Centro de dados</h3>
+                        <p>A operação efetiva do Centro de Dados exige um investimento equilibrado nas instalações e nos
+                            equipamentos. O primeiro passo é estabelecer um ambiente de linha de base adequado para a
+                            instalação de equipamentos.</p>
+                    </div>
+                </div>
+
+                <div class="item-servico">
+                    <div class="ponto"></div>
+                    <div class="linha"></div>
+                    <div class="conteudo-servico">
+                        <h3>Facilidades do Centro de Dados</h3>
+                        <p>O Centro de Dados oferece uma variedade de serviços e infraestruturas, desde servidores e
+                            armazenamento até soluções de virtualização, computação em nuvem, segurança e
+                            telecomunicações.</p>
+                    </div>
+                </div>
+
+                <div class="item-servico">
+                    <div class="ponto"></div>
+                    <div class="linha"></div>
+                    <div class="conteudo-servico">
+                        <h3>Redes</h3>
+                        <p>A DOLITECNO capacita as empresas a aproveitarem ao máximo as novas tecnologias de comunicação
+                            e colaboração, oferecendo soluções de rede flexíveis e abrangentes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projectos Top-->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container pb-5">
+            <h2 class="services-title text-center">Top #3 últimos Trabalhos.</h2>
+            <div class="portfolio-grid mt-5 mb-5">
+                <div class="portfolio-item imgScroll" data-category="landing">
+                    <div class="portfolio-image-container">
+                        <img src="img/capturas/sotecon.webp" alt="Black Week Campaign">
+                    </div>
+                    <div class="portfolio-overlay text-center justify-content-center">
+                        <h3>Sotecon</h3>
+                        <a href="https://sotecon.org/" class="view-project-btn w-75">VER PROJETO</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="landing">
+                    <div class="portfolio-image-container">
+                        <img src="img/servicos/redes.webp" alt="Black Week Campaign">
+                    </div>
+                    <div class="portfolio-overlay text-center justify-content-center">
+                        <h3>Infraestrutura</h3>
+                        <a href="#" class="view-project-btn w-75">VER PROJETO</a>
+                    </div>
+                </div>
+                <div class="portfolio-item imgScroll" data-category="landing">
+                    <div class="portfolio-image-container">
+                        <img src="img/capturas/creative_wilmadigital_com.webp" alt="Black Week Campaign">
+                    </div>
+                    <div class="portfolio-overlay text-center justify-content-center">
+                        <h3>Creative</h3>
+                        <a href="https://creative.wilmadigital.com/" class="view-project-btn w-75">VER PROJETO</a>
+                    </div>
+                </div>
+                <!-- Add more portfolio items following the same structure -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosso Team -->
+    <section class="team-section" data-parallax="scroll" data-image-src="/api/placeholder/1920/1080">
+        <div class="team-container">
+            <div class="team-header" data-aos="fade-up">
+                <h2 class="services-title">Nossa Equipe</h2>
+                <p class="team-subtitle">Conheça os profissionais dedicados que tornam possível a entrega de soluções</p>
+            </div>
+            
+            <div class="team-grid">
+                <!-- Card 1 -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-image-container parallax-card">
+                        <img src="img/team/jovani.webp" alt="João Silva" class="member-image">
+                        <!--<img src="https://placehold.co/300x300" alt="João Silva" class="member-image">-->
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Nuno Dias</h3>
+                        <p class="member-role">CEO & Fundador</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.218 11.218 0 0112 2.292c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-image-container parallax-card">
+                        <img src="img/team/imgMagno.png" alt="Maria Santos" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Magno (Sobrenome)</h3>
+                        <p class="member-role">CTO & Fundador</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-image-container parallax-card">
+                        <img src="img/team/imgJovani.jpg" alt="Placeholder Image" class="member-image">
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Jovani Santos</h3>
+                        <p class="member-role">Desenvolvedor de Software</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link">
+                                <svg class="social-icon" viewBox="0 0 24 24">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 services-title">Perguntas Frequentes</h2>
+
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-12">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ Item 1 (Ativo por padrão) -->
+                        <div class="accordion-item faq-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1">
+                                    <i class="fas fa-cogs faq-icon"></i>
+                                    Quais são os serviços principais oferecidos pela Dolitecno?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse" show data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Oferecemos uma ampla gama de serviços em TI, incluindo consultoria em TICS,
+                                    desenvolvimento de software, Ciber Segurança, Redes de Telecomunicações, Antenas Ponto a Ponto,
+                                    Segurança Eletrônica, infraestrutura de TI e Instalações.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="accordion-item faq-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2">
+                                    <i class="fas fa-calculator faq-icon"></i>
+                                    Como posso solicitar um orçamento para serviços?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Você pode solicitar um orçamento através do nosso WhatsApp, e-mail ou preenchendo o
+                                    formulário de contato em nosso site. Nossa equipe responderá em até 24 horas úteis
+                                    com uma proposta personalizada.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="accordion-item faq-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3">
+                                    <i class="fas fa-headset faq-icon"></i>
+                                    Vocês oferecem suporte técnico contínuo?
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sim, oferecemos suporte técnico contínuo 24/7 para todos os nossos clientes, com
+                                    diferentes planos de atendimento adaptados às necessidades de cada empresa.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="accordion-item faq-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4">
+                                    <i class="fas fa-clock faq-icon"></i>
+                                    Qual é o prazo médio para implementação de projetos?
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    O prazo varia de acordo com a complexidade do projeto. Após a análise inicial,
+                                    fornecemos um cronograma detalhado com as etapas e prazos específicos para cada fase
+                                    do projeto.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="accordion-item faq-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq5">
+                                    <i class="fas fa-map-marked-alt faq-icon"></i>
+                                    Vocês atendem em todo o país?
+                                </button>
+                            </h3>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sim, atendemos em todo o território nacional, com soluções presenciais e remotas,
+                                    adaptando nossos serviços às necessidades específicas de cada região.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq6">
+                                    <i class="fas fa-map-marked-alt faq-icon"></i>
+                                    Preços para construções de web site?
+                                </button>
+                            </h3>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <div class="container py-5" id="preco">
+                                        <div class="row g-4">
+                                            <!-- Plataformas CMS -->
+                                            <div class="col-lg-4">
+                                                <div class="preco-card">
+                                                    <h3 class="card-title">Plataformas CMS</h3>
+                                                    <div class="preco">350.000 Kz</div>
+                                                    <p class="text-white mb-4">Acessível e Dinámico, implementado em até 7 dias.</p>
+                                                    <ul class="lista-preco">
+                                                        <li>E-commerce (Simples)</li>
+                                                        <li>Landing Pages</li>
+                                                        <li>Corporativos</li>
+                                                        <li>Institucionais</li>
+                                                        <li>Blogs</li>
+                                                        <li>Portal Digital</li>
+                                                        <li>1 ano de Dominio e Hospedagem gratis</li>
+                                                        <li>WebShield Essencial</li>
+                                                        <li>Funcionalidades Ilimitadas</li>
+                                                    </ul>
+                                                    <a href="https://wa.me/928651461" target="_blank" class="btn btn-primary w-100">Começar Agora</a>
+                                                </div>
+                                            </div>
+                                
+                                            <!-- Sistemas Web -->
+                                            <div class="col-lg-4">
+                                                <div class="preco-card listado position-relative">
+                                                    <span class="popular-badge">POPULAR</span>
+                                                    <h3 class="card-title">Sistemas Web</h3>
+                                                    <div class="preco">Sob Consulta</div>
+                                                    <p class="text-white mb-4">Construimos ferramentas para dinamizar o teu trabalho, e melhorar a sua relação com os seus clientes.</p>
+                                                    <ul class="lista-preco">
+                                                        <li>Sistemas Personalizados</li>
+                                                        <li>Integrações Avançadas</li>
+                                                        <li>Suporte Dedicado</li>
+                                                        <li>Análise de Requisitos</li>
+                                                        <li>Desenvolvimento Ágil</li>
+                                                        <li>Manutenção Contínua</li>
+                                                    </ul>
+                                                    <a href="https://wa.me/928651461" target="_blank" class="btn btn-primary w-100">Contactar</a>
+                                                </div>
+                                            </div>
+                                
+                                            <!-- Plataformas Nativas -->
+                                            <div class="col-lg-4">
+                                                <div class="preco-card">
+                                                    <h3 class="card-title">Plataformas Nativas</h3>
+                                                    <div class="preco">800.000 Kz</div>
+                                                    <p class="text-white mb-4">Tudo construído no mínimo detálhe, sem limitações.</p>
+                                                    <ul class="lista-preco">
+                                                        <li>Tudo da Plataformas CMS</li>
+                                                        <li>E-commerce (Avançado)</li>
+                                                        <li>Integração com outros Sistemas</li>
+                                                        <li>Integração via API</li>
+                                                        <li>1 ano de Dominio e Hospedagem gratis</li>
+                                                        <li>WebShield Essencial</li>
+                                                        <li>Funcionalidades Ilimitadas</li>
+                                                    </ul>
+                                                    <a href="https://wa.me/928651461" target="_blank" class="btn btn-primary w-100">Começar Agora</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="clientes">
+        <div class="container">
+            <h1 class="mb-5 services-title">Nossos Clientes</h1>
+            <div class="carrossel-clientes owl-carousel owl-theme">
+                <div class="cartao-cliente">
+                    <img src="img/clientes/luzKabar.png" class="imagem-cliente" alt="Cliente 7">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/Ango (2).png" class="imagem-cliente" alt="Cliente 1">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/Maria (2).png" class="imagem-cliente" alt="Cliente 2">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/ccenpriva (2).png" class="imagem-cliente" alt="Cliente 3">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/Rucambio.png" class="imagem-cliente" alt="Cliente 8">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/ClienteLaranja (2).png" class="imagem-cliente" alt="Cliente 4">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/logocCosta (2).png" class="imagem-cliente" alt="Cliente 5">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/logoNej (2).png" class="imagem-cliente" alt="Cliente 6">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/teicer (2).png" class="imagem-cliente" alt="Cliente 9">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/Trust (2).png" class="imagem-cliente" alt="Cliente 10">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/zone (2).png" class="imagem-cliente" alt="Cliente 10">
+                </div>
+                <div class="cartao-cliente">
+                    <img src="img/clientes/angoMonipri.png" class="imagem-cliente" alt="Cliente 10">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Subscrever</h3>
+                    <p>Fique por dentro das novidades! Assine nossa newsletter.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" class="form-control" placeholder="Deixe seu E-mail">
+                    <button class="btn btn-primary" type="submit">Subscrever</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-3">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="CIBAC Logo">
+                    </a>
+                    <p class="footer-description">
+                        Transformando desafios tecnológicos em soluções inovadoras para empresas modernas.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-title">Links Rápidos</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#" class="nav-link-footer">Início</a></li>
+                        <li><a href="#sobreNos" class="nav-link-footer">Sobre</a></li>
+                        <li><a href="#servicos" class="nav-link-footer">Serviços</a></li>
+                        <li><a href="#" class="nav-link-footer">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-title">Serviços</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#" class="nav-link-footer">Informática</a></li>
+                        <li><a href="#" class="nav-link-footer">Cibersegurança</a></li>
+                        <li><a href="#" class="nav-link-footer">Telecomunicações</a></li>
+                        <li><a href="#" class="nav-link-footer">Segurança Eletrônica</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-title">Contato</h5>
+                    <ul class="footer-contact list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i>Luanda (Samba, Morro da Luz)</li>
+                        <li><i class="fas fa-phone"></i>(+244) 924 677 182 | 923 872 626</li>
+                        <li><i class="fas fa-envelope"></i>Informacao.doliteno@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-copyright text-center">
+                <p><b>&copy; 2025 Dolitecno Mady by JovaniSantos. Todos os direitos reservados.</b></p>
+            </div>
+        </div>
+    </footer>
+    <div id="whatsapp-button">
+        <a href="https://wa.me/928651461" target="_blank">
+            <img src="img/iconewhat.webp" alt="WhatsApp">
+        </a>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        function clicouLinkSobre() {
+            window.location.href = "sobreNos.html";
+        }
+
+    </script>
+
+    <script>
+        //Script contador 
+        document.addEventListener("DOMContentLoaded", function () {
+            const achievementNumbers = document.querySelectorAll(".achievement-number");
+
+            function countUp(element) {
+                const target = parseInt(element.getAttribute("data-target"));
+                let count = 0;
+                const interval = setInterval(function () {
+                    element.textContent = count.toLocaleString();
+                    count++;
+                    if (count > target) {
+                        clearInterval(interval);
+                    }
+                }, 10);
+            }
+
+            function observeAchievements() {
+                const options = {
+                    rootMargin: "0px",
+                    threshold: 0.5
+                };
+
+                const observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            const achievementNumber = entry.target.querySelector(".achievement-number");
+                            countUp(achievementNumber);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, options);
+
+                achievementNumbers.forEach(function (number) {
+                    observer.observe(number.closest(".achievement"));
+                });
+            }
+
+            observeAchievements();
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                duration: 1000, // Duração da animação em milissegundos
+                once: true,     // A animação ocorre apenas uma vez
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('whatsapp-button').addEventListener('click', function () {
+            window.open('https://wa.me/928651461', '_blank');
+        });
+    </script>
+    <!-- AOS JS -->
+    <!-- particles -->
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+                move: { enable: true, speed: 2 }
+            }
+        });
+    </script>
+    <!-- carrossel -->
+    <script>
+        $(document).ready(function () {
+            $('.carrossel-clientes').owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true, // Ativar navegação (setas)
+                dots: true, // Ativar dots
+                autoplay: true,
+                autoplayTimeout: 3000,
+                navText: ["<span>&#10094;</span>", "<span>&#10095;</span>"], // Ícones das setas
+                responsive: {
+                    0: { items: 1 },
+                    480: { items: 2 },
+                    768: { items: 3 },
+                    992: { items: 4 },
+                    1200: { items: 5 }
+                }
+            });
+        });
+    </script>
+    <!-- Competemcias -->
+    <script>
+        const observador = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const item = entry.target;
+                    item.classList.add('visivel');
+
+                    // Anima a linha do item
+                    const linha = item.querySelector('.linha');
+                    if (linha) {
+                        setTimeout(() => {
+                            linha.classList.add('visivel');
+                        }, 200);
+                    }
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '-50px'
+        });
+
+        // Observa todos os items da timeline
+        document.querySelectorAll('.item-servico').forEach(item => {
+            observador.observe(item);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializa o AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+        
+            // Efeito de parallax nos cards
+            const cards = document.querySelectorAll('.team-card');
+            
+            cards.forEach(card => {
+                const image = card.querySelector('.member-image');
+                
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = -(x - centerX) / 10;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+                    image.style.transform = `translateZ(20px) scale(1.1)`;
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+                    image.style.transform = 'translateZ(0) scale(1)';
+                });
+            });
+        });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const cards = document.querySelectorAll('.project-card');
+                
+                cards.forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        card.style.transform = 'translateY(-10px)';
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'translateY(0)';
+                    });
+                });
+            });
+        </script>
+</body>
+
+</html>

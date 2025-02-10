@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="shortcut icon" href="img/favicon.webp" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+    <link href="css/googleFont.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <script src="js/particles.min.js"></script>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <!-- AOS CSS -->
+    <link href="css/aos.css" rel="stylesheet">
+    <style>
+        /* Contacto Ínicio */
+
+        #contacto .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #000610 0%, #001b27 50%, #000205 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #contacto .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        #contacto .contact-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        #contacto .contact-title {
+            color: var(--accent-blue);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        #contacto .contact-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, var(--accent-blue) 0%, #00c3ff 100%);
+            border-radius: 2px;
+        }
+
+        #contacto .contact-subtitle {
+            color: #b0b0b0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contacto .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: start;
+        }
+
+        #contacto .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        #contacto .info-item {
+            background: rgba(0, 19, 27, 0.9);
+            border: 1px solid #196cf3;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        #contacto .info-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 20px rgba(0, 221, 255, 0.2);
+        }
+
+        #contacto .info-icon {
+            width: 40px;
+            height: 40px;
+            fill: var(--accent-blue);
+            margin-bottom: 15px;
+        }
+
+        #contacto .info-item h3 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        #contacto .info-item p {
+            color: #b0b0b0;
+            line-height: 1.6;
+        }
+
+        #contacto .contact-form {
+            background: rgba(0, 19, 27, 0.9);
+            border: 1px solid #196cf3;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #contacto .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        #contacto .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 0;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        
+        #contacto #checkbox {
+            background: transparent;
+            border: none;
+            font-size: 1rem;
+        }
+
+        #contacto .form-group textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        #contacto .form-group label {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: #b0b0b0;
+            pointer-events: none;
+            transition: 0.3s ease all;
+        }
+
+        #contacto .form-group input:focus~label,
+        .form-group textarea:focus~label,
+        .form-group input:valid~label,
+        .form-group textarea:valid~label {
+            top: -20px;
+            font-size: 0.9rem;
+            color: var(--accent-blue);
+        }
+
+        #contacto .line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #196cf3;
+        }
+
+        #contacto .form-group input:focus~.line,
+        .form-group textarea:focus~.line {
+            background: var(--accent-blue);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        #contacto .submit-btn {
+            background: linear-gradient(135deg, #196cf3 0%, #00c3ff 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        #contacto .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 195, 255, 0.3);
+        }
+
+        #contacto .btn-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        /* Oculta o checkbox original */
+        .checkbox-container input {
+            display: none;
+        }
+
+        /* Estiliza a caixa do checkbox */
+        .checkbox-custom {
+            width: 25px;
+            height: 15px;
+            border: 2px solid var(--accent-blue);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            margin-right: 8px;
+        }
+
+        /* Ícone do check */
+        .checkbox-custom::after {
+            content: "✔";
+            font-size: 14px;
+            color: white;
+            display: none;
+        }
+
+        /* Estiliza quando marcado */
+        .checkbox-container input:checked + .checkbox-custom {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .checkbox-container input:checked + .checkbox-custom::after {
+            display: block;
+        }
+
+        /* Efeito de hover */
+        .checkbox-container:hover .checkbox-custom {
+            border-color: #007bff;
+        }
+
+        #contacto .submit-btn:hover .btn-effect {
+            animation: btnEffect 1s infinite;
+        }
+
+        @keyframes btnEffect {
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #contacto .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            #contacto .contact-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servico.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobreNos.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portofolio.html">Portfólio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Loja</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <img src="img/bannercontacto2.webp" alt="" class="video-background">
+        <div class="video-overlay"></div>
+        <div class="container hero-content" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
+            <h1 class="hero-title">Conecte-se ao Futuro com as Soluções de Rede Inteligentes da DOLITECNO</h1>
+            <p class="hero-description">
+                Sua empresa mais ágil, colaborativa e segura
+            </p>
+            <a href="https://wa.me/928651461" class="hero-btn">solicitar Orçamento
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14m-7-7l7 7-7 7" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+
+    <section id="contacto" class="contact-section" data-aos="fade-up">
+        <div class="contact-container container">
+            <div class="row justify-content-center" style="margin-top: 100px; margin-bottom: 100px;">
+                <div class="col-md-12">
+                    <div class="contact-header">
+                        <h2 class="services-title">Entre em Contato</h2>
+                        <p class="contact-subtitle">Estamos aqui para ajudar. Entre em contato conosco!</p>
+                    </div>
+
+                    <div class="contact-wrapper">
+                        <div class="contact-info" data-aos="fade-right">
+                            <div class="info-item">
+                                <svg class="info-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0C7.802 0 4 3.403 4 7.602C4 11.8 7.469 16.812 12 24C16.531 16.812 20 11.8 20 7.602C20 3.403 16.199 0 12 0ZM12 11C10.343 11 9 9.657 9 8C9 6.343 10.343 5 12 5C13.657 5 15 6.343 15 8C15 9.657 13.657 11 12 11Z" />
+                                </svg>
+                                <h3>Localização</h3>
+                                <p>Samba, Morro da Luz<br>Luanda-Angola</p>
+                            </div>
+
+                            <div class="info-item">
+                                <svg class="info-icon" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" />
+                                </svg>
+                                <h3>Email</h3>
+                                <p>contato@exemplo.com<br>suporte@exemplo.com</p>
+                            </div>
+
+                            <div class="info-item">
+                                <svg class="info-icon" viewBox="0 0 24 24">
+                                    <path d="M20 10.999H22C22 5.869 18.127 2 12.99 2V4C17.052 4 20 6.943 20 10.999Z" />
+                                    <path d="M13 8C15.103 8 16 8.897 16 11H18C18 7.686 15.314 5 13 5V8Z" />
+                                    <path
+                                        d="M16.422 13.443C15.375 12.937 14.382 12.482 13.5 12.085C13.049 11.904 12.576 11.999 12.217 12.341L10.414 14.144C8.533 13.194 7.171 11.832 6.221 9.951L8.024 8.148C8.367 7.789 8.463 7.316 8.283 6.866C7.887 5.988 7.432 4.996 6.926 3.948C6.752 3.563 6.419 3.276 6.007 3.143C5.595 3.01 5.146 3.042 4.757 3.233L2.318 4.233C1.727 4.482 1.366 5.079 1.397 5.716C1.644 9.251 3.015 12.541 5.272 14.799C7.529 17.056 10.819 18.427 14.354 18.674C14.991 18.705 15.588 18.344 15.837 17.753L16.836 15.314C17.029 14.925 17.064 14.475 16.932 14.062C16.799 13.649 16.51 13.316 16.123 13.142L16.422 13.443Z" />
+                                </svg>
+                                <h3>Telefone</h3>
+                                <p>+244 923 872 616<br>+244 924 677 182</p>
+                            </div>
+                        </div>
+
+                        <form class="contact-form" data-aos="fade-left">
+                            <div class="form-group">
+                                <input type="text" id="name" required>
+                                <label for="name">Seu Nome</label>
+                                <div class="line"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="email" required>
+                                <label for="email">Seu Email</label>
+                                <div class="line"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="number" id="email" required>
+                                <label for="email">Seu Telefone</label>
+                                <div class="line"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" id="subject" required>
+                                <label for="subject">Assunto</label>
+                                <div class="line"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="message" required></textarea>
+                                <label for="message">Mensagem</label>
+                                <div class="line"></div>
+                            </div>
+
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="checkbox">
+                                <span class="checkbox-custom"></span>
+                                Desejo receber e-mails com novidades, promoções e informações relevantes sobre a Dolitecno.
+                                Você poderá cancelar a inscrição a qualquer momento.
+                            </label>
+                            <button type="submit" class="submit-btn">
+                                Enviar Mensagem
+                                <span class="btn-effect"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Google Maps -->
+                    <div id="map" style="width: 100%; height: 300px; border-radius: 10px; margin-top: 20px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Subscrever</h3>
+                    <p>Fique por dentro das novidades! Assine nossa newsletter.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" class="form-control" placeholder="Deixe seu E-mail">
+                    <button class="btn btn-primary" type="submit">Subscrever</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-3">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="CIBAC Logo">
+                    </a>
+                    <p class="footer-description">
+                        Transformando desafios tecnológicos em soluções inovadoras para empresas modernas.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-title">Links Rápidos</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#" class="nav-link-footer">Início</a></li>
+                        <li><a href="#sobreNos" class="nav-link-footer">Sobre</a></li>
+                        <li><a href="#servicos" class="nav-link-footer">Serviços</a></li>
+                        <li><a href="#" class="nav-link-footer">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-title">Serviços</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#" class="nav-link-footer">Informática</a></li>
+                        <li><a href="#" class="nav-link-footer">Cibersegurança</a></li>
+                        <li><a href="#" class="nav-link-footer">Telecomunicações</a></li>
+                        <li><a href="#" class="nav-link-footer">Segurança Eletrônica</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="footer-title">Contato</h5>
+                    <ul class="footer-contact list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i>Luanda (Samba, Morro da Luz)</li>
+                        <li><i class="fas fa-phone"></i>(+244) 924 677 182 | 923 872 626</li>
+                        <li><i class="fas fa-envelope"></i>Informacao.doliteno@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-copyright text-center">
+                <p>&copy; 2024 Dolitecno. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <div id="whatsapp-button">
+        <a href="https://wa.me/seu_numero_aqui" target="_blank">
+            <img src="img/iconewhat.webp" alt="WhatsApp">
+        </a>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializa o AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Animação dos info-items
+            const infoItems = document.querySelectorAll('.info-item');
+            infoItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.2}s`;
+            });
+
+            // Handler do formulário
+            const form = document.querySelector('.contact-form');
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Aqui você pode adicionar a lógica para enviar o formulário
+                alert('Mensagem enviada com sucesso!');
+                form.reset();
+            });
+        });
+    </script>
+
+    <!-- Adicionando Google Maps -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-8.8209, 13.2504], 15); // Coordenadas aproximadas de Morro da Luz, Samba
+
+        // Adicionando o mapa do OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Adicionando um marcador no Morro da Luz
+        L.marker([-8.8209, 13.2504]).addTo(map)
+            .bindPopup('Morro da Luz - Samba, Luanda')
+            .openPopup();
+    </script>
+</body>
+
+</html>
